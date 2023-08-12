@@ -1,0 +1,197 @@
+* {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: linear-gradient( #bbb, transparent 1px), linear-gradient( 90deg, #bbb, transparent 1px);
+	background-size: 30px 30px;
+	background-position: center center;
+    background-color: rgb(255, 255, 255);
+
+    font-family: 'Acme', sans-serif;
+    font-size: 16px;
+    text-align: center; /* Important */
+}
+
+/* Dashboard and Controls */
+
+#dashboard {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.controls {
+    width: 438px; /* (numCols * 44) - 2 */
+    margin: 0 auto;
+    font-weight: bold;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;    
+}
+
+#difficulty {
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+    display: inline-block;
+    margin-top: -11px;
+}
+
+#difficulty li {
+    background-color: #bbb;
+    color: #fff;
+    cursor: pointer;
+    display : inline-block;
+
+    font-size: 16px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    text-align: center;
+    padding: 6px 8px;
+
+    
+}
+
+#difficulty li:hover { background-color:  rgb(92, 143, 56); }
+#difficulty li.selected { background-color:rgb(119, 170, 83);}
+
+#board {
+    min-width: 440px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    background-color: white;
+    
+}
+
+#value {
+    color: #777;
+    font-size: 35px;
+    
+}
+
+.space {
+    background-color: #bbb;
+    display: inline-block;
+
+    border: 2px solid none;
+    margin: 2px;
+    cursor: pointer;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.safe {
+    background-color: #eee;
+    color: #777;
+}
+
+.animal img{
+    /* display: block; */
+    margin: 0 auto; 
+    width: 70px;
+    height: 70px;
+}
+
+
+.material-symbols-outlined{
+color: rgb(0, 128, 55);
+}
+
+.space .bomb {
+    display: inline-block;
+    /* content: url(pics/rabbit.png); */
+    /* align-items: center; */
+    color: transparent;
+    
+}
+
+/* .space .fa { line-height: 40px; } */
+/* .space .fa-bomb { font-size: 24px; }
+.space .fa-smile-o { font-size: 26px; } */
+.space img {
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.space:hover { background-color: rgb(92, 143, 56); }
+
+#new-game {
+    width: 420px;
+    background-color: rgb(147, 207, 105);
+    color: #fff;
+    font-size: 38px;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-top: -15px;
+}
+
+#new-game:hover { background-color: rgb(119, 170, 83);}
+
+#new-game-lost {
+    width: 420px;
+    background-color: rgb(241, 161, 74);
+    color: #fff;
+    font-size: 38px;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-top: -15px;
+}
+
+#new-game-lost:hover { background-color: rgb(237, 180, 118);}
+
+#new-game-almost-lost {
+    width: 420px;
+    background-color: rgb(151, 73, 199);
+    color: #fff;
+    font-size: 38px;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-top: -15px;
+}
+
+#new-game-almost-lost:hover { background-color: rgb(165, 108, 200);}
+
+#feedback {
+    display: inline-flex;
+    vertical-align: middle;
+    text-align: center;
+    
+    font-size: 30px;
+    padding-top: 4px;
+    right: 0;
+    position:absolute;
+    margin-top: -30px;
+
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: 30px;
+    color: rgb(71, 79, 64);
+}

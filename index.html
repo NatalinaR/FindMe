@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="icon" href="pics/favicon_io/favicon-32x32.png" type=”image/x-icon”>
+    
+             
+
+    <script src="logic.js"></script>
+    
+    <title>FindMe</title>
+</head>
+<body>
+    <div id="title">FindMe</div>
+    <div id="dashboard" class="controls">
+        <!-- <div id="help"></div>
+        <div id="git"></div> -->
+        <ul id="difficulty">
+            <li id="easy">Easy</li>
+            <li id="reg" class="selected">Normal</li>
+            <li id="hard">Hard</li>
+        </ul>
+        <div id="feedback">
+            <div><span id="value">3</span></div>
+        
+            <!-- <i class="fa fa-bomb"></i> -->
+            <div class="animal">
+                <img src="pics/rabbit.png" alt="No pic">
+            </div>
+        </div>
+    </div>
+    <div id="board"></div>
+    <div id="new-game" class="controls">໒꒰ྀིっ˕ -｡꒱ྀི১ <br /> Good game <br/> One more time?</div>
+    <div id="new-game-lost" class="controls">:p<br />Try again if u can!</div>
+    <div id="new-game-almost-lost" class="controls">wow<br />You almost found us! Try again!</div>
+    <script type="text/javascript">
+        var board;
+        $(document).ready(function () {
+            newGame('reg');
+            $('#new-game').hide();
+            $('#new-game-lost').hide();
+            $('#new-game-almost-lost').hide();
+
+
+            $('#difficulty li').click(function (eventObject) {
+                $('#difficulty li').removeClass('selected');
+                $(this).addClass('selected');
+                var difficulty = $(this).attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+                $('#new-game-lost').hide();
+                $('#new-game-almost-lost').hide();
+            });
+
+            $('#new-game').click(function (eventObject) {
+                var difficulty = $('#difficulty li.selected').attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+                $('#new-game-lost').hide();
+                $('#new-game-almost-lost').hide();
+            });
+
+            $('#new-game-lost').click(function (eventObject) {
+                var difficulty = $('#difficulty li.selected').attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+                $('#new-game-lost').hide();
+                $('#new-game-almost-lost').hide();
+            });
+
+            $('#new-game-almost-lost').click(function (eventObject) {
+                var difficulty = $('#difficulty li.selected').attr('id');
+                newGame(difficulty);
+                $('#new-game').hide();
+                $('#new-game-lost').hide();
+                $('#new-game-almost-lost').hide();
+            });
+        });
+        /*
+            This is equivalent to-
+            $(function() {
+            });
+        */
+    </script>
+</body>
+</html>
