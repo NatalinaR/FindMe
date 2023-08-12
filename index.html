@@ -41,7 +41,7 @@
     <div id="new-game-lost" class="controls">:p<br />Try again if u can!</div>
     <div id="new-game-almost-lost" class="controls">wow<br />You almost found us! Try again!</div>
     <script type="text/javascript">
-        var board;
+        let board;
         $(document).ready(function () {
             newGame('reg');
             $('#new-game').hide();
@@ -52,7 +52,7 @@
             $('#difficulty li').click(function (eventObject) {
                 $('#difficulty li').removeClass('selected');
                 $(this).addClass('selected');
-                var difficulty = $(this).attr('id');
+                let difficulty = $(this).attr('id');
                 newGame(difficulty);
                 $('#new-game').hide();
                 $('#new-game-lost').hide();
@@ -60,7 +60,7 @@
             });
 
             $('#new-game').click(function (eventObject) {
-                var difficulty = $('#difficulty li.selected').attr('id');
+                let difficulty = $('#difficulty li.selected').attr('id');
                 newGame(difficulty);
                 $('#new-game').hide();
                 $('#new-game-lost').hide();
@@ -68,7 +68,7 @@
             });
 
             $('#new-game-lost').click(function (eventObject) {
-                var difficulty = $('#difficulty li.selected').attr('id');
+                let difficulty = $('#difficulty li.selected').attr('id');
                 newGame(difficulty);
                 $('#new-game').hide();
                 $('#new-game-lost').hide();
@@ -76,18 +76,13 @@
             });
 
             $('#new-game-almost-lost').click(function (eventObject) {
-                var difficulty = $('#difficulty li.selected').attr('id');
+                let difficulty = $('#difficulty li.selected').attr('id');
                 newGame(difficulty);
                 $('#new-game').hide();
                 $('#new-game-lost').hide();
                 $('#new-game-almost-lost').hide();
             });
         });
-        /*
-            This is equivalent to-
-            $(function() {
-            });
-        */
     </script>
 </body>
 </html>
