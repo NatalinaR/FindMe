@@ -171,8 +171,10 @@ function Board(row, col){
 
     function checkTheClicks() {
         if(this.clickCount == this.clickPossible && this.spacesCleared == 0) {
+            this.gameOver = true;
             $('#new-game-lost').show();
         } else if (this.clickCount == this.clickPossible && this.spacesCleared < this.bombCount) {
+            this.gameOver = true;
             $('#new-game-almost-lost').show();
         }
     }
