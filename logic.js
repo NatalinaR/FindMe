@@ -42,9 +42,7 @@ function Board(row, col){
         var row = $(target_elem).attr("data-row");
         var col = $(target_elem).attr("data-col");
 
-        this.clickCount++; 
-        this.clickPossible2--;
-
+       
         // if (clickCount >= this.row*this.col / 2){
         //     $('#new-game').show();
         // }
@@ -137,7 +135,10 @@ function Board(row, col){
         var dom_target = 'div[data-row="' + (row + 1) + '"][data-col="' + (col + 1) + '"]';
         $(dom_target).addClass('bomb');
         $(dom_target).html('<img src="pics/rabbit.png" alt="No pic">');
-         this.spacesCleared++;   
+        this.spacesCleared++;   
+        this.clickCount++; 
+        this.clickPossible2--;
+
          checkAllCellsExplored.call(this);    
          checkTheClicks.call(this);
 
@@ -155,6 +156,9 @@ function Board(row, col){
         } 
         else {
             $(dom_target).html('<img src="pics/grass.png" alt="No pic">');
+            this.clickCount++; 
+            this.clickPossible2--;
+
         }
         checkAllCellsExplored.call(this);
         checkTheClicks.call(this);
