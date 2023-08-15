@@ -24,12 +24,16 @@ function newGame(difficulty) {
         board.click(eventObject.target);
     });
 
-    
+    localStorage.getItem('coin')
 
     return board;
 }
 
-
+  if(localStorage.getItem('coin') >= 0){
+        coinCount = localStorage.getItem('coin');
+    } else {
+        coinCount = 0;
+    }
 
 // Board Object
 function Board(row, col){
@@ -43,11 +47,7 @@ function Board(row, col){
     this.clickPossible = 0;
     this.clickPossible2 = 0;
 
-    if(localStorage.getItem('coin') >= 0){
-        coinCount = localStorage.getItem('coin');
-    } else {
-        coinCount = 0;
-    }
+  
 
     this.click = function (target_elem) {
         var row = $(target_elem).attr("data-row");
