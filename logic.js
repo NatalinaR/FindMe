@@ -47,7 +47,8 @@ function Board(row, col){
     this.clickPossible = 0;
     this.clickPossible2 = 0;
 
-  
+    localStorage.getItem('coin');
+   
 
     this.click = function (target_elem) {
         var row = $(target_elem).attr("data-row");
