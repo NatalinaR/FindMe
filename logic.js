@@ -203,7 +203,10 @@ function Board(row, col){
     function wonCoins (){
         switch(coinIndex) {
             case 0:
-                localStorage.setItem('coin', coinCount++);
+                coinCount = Number(coinCount) + 1;
+                localStorage.setItem('coin', coinCount);
+                // localStorage.setItem('coin', 0);
+
                 break;
             case 1:
             case 2:    
@@ -211,14 +214,14 @@ function Board(row, col){
                 localStorage.setItem('coin', coinCount);
                 break;
         }
-
     }
 
     function wonLessCoins (){
         switch(coinIndex) {
             case 0:
             case 1:    
-                localStorage.setItem('coin', coinCount++);
+                coinCount = Number(coinCount) + 1;
+                localStorage.setItem('coin', coinCount);
                 break;
             case 2:
                 coinCount = Number(coinCount) + 2;
@@ -233,14 +236,16 @@ function Board(row, col){
                 if(coinCount == 0) {
                     localStorage.setItem('coin', coinCount);
                 } else {
-                    localStorage.setItem('coin', coinCount--);
+                    coinCount = Number(coinCount) - 1;
+                    localStorage.setItem('coin', coinCount);
                 }
                 break;
             case 1:
                 if(coinCount == 0) {
                     localStorage.setItem('coin', coinCount);
                 } else {
-                    localStorage.setItem('coin', coinCount--);
+                    coinCount = Number(coinCount) - 1;
+                    localStorage.setItem('coin', coinCount);
                 }
                 break;
             case 2:
@@ -252,6 +257,7 @@ function Board(row, col){
                 }
                 break;
         }
+
     }
 
 }
