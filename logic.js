@@ -144,8 +144,8 @@ function Board(row, col){
     this.explode = function(row, col) {
         var dom_target = 'div[data-row="' + (row + 1) + '"][data-col="' + (col + 1) + '"]';
         $(dom_target).addClass('bomb');
-        // $(dom_target).html('<img src="pics/rabbit.png" alt="No pic">');
-        $(dom_target).html('<img src="pics/alien.png" alt="No pic">');
+        $(dom_target).html('<img src="pics/rabbit.png" alt="No pic">');
+        // $(dom_target).html('<img src="pics/alien.png" alt="No pic">');
 
          this.spacesCleared++;  
          this.clickCount++; 
@@ -166,8 +166,8 @@ function Board(row, col){
             $(dom_target).text(this.spaces[row][col].holds);
         } 
         else {
-            // $(dom_target).html('<img src="pics/grass.png" alt="No pic">');
-            $(dom_target).html('<img src="pics/corn.png" alt="No pic">');
+            $(dom_target).html('<img src="pics/grass2.png" alt="No pic">');
+            // $(dom_target).html('<img src="pics/corn.png" alt="No pic">');
             this.clickCount++; 
             this.clickPossible2--;
         }
